@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var csslint = require('gulp-csslint');
 var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-clean-css');
-var sass = require('gulp-sass');
+
+const sass = require('gulp-sass')(require('sass'));
+//var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');

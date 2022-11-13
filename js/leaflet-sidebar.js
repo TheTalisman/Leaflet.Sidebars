@@ -61,13 +61,11 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         var i, child, tabContainers, newContainer, container;
 
         // use container from previous onAdd()
-        container = this._container
+        container = this._container;
 
         // use the container given via options.
         if (!container) {
-            container = this._container || typeof this.options.container === 'string'
-            ? L.DomUtil.get(this.options.container)
-            : this.options.container;
+            container = this._container || typeof this.options.container === 'string' ? L.DomUtil.get(this.options.container) : this.options.container;
         }
 
         // if no container was specified or not found, create it and apply an ID
@@ -149,8 +147,8 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         // Remove click listeners for tab & close buttons
         for (var i = 0; i < this._tabitems.length; i++)
             this._tabClick(this._tabitems[i], 'off');
-        for (var i = 0; i < this._closeButtons.length; i++)
-            this._closeClick(this._closeButtons[i], 'off');
+        for (var j = 0; j < this._closeButtons.length; j++)
+            this._closeClick(this._closeButtons[j], 'off');
 
         this._tabitems = [];
         this._panes = [];
